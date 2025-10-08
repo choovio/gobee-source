@@ -1,0 +1,44 @@
+# Copyright (c) CHOOVIO Inc.
+# SPDX-License-Identifier: Apache-2.0
+version: "3.9"
+services:
+  users:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: users }
+  things:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: things }
+  certs:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: certs }
+  domains:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: domains }
+
+  bootstrap:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: bootstrap }
+  provision:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: provision }
+
+  readers:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: readers }
+  writers:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: writers }
+
+  rules:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: rules }
+  alarms:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: alarms }
+  reports:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: reports }
+
+  http-adapter:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: http }
+  ws-adapter:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: ws }
+  mqtt-adapter:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: mqtt }
+  coap-adapter:
+    build: { context: ./, dockerfile: docker/Dockerfile, target: coap }
+
+  # Contrib adapters (source is in contrib/supermq-contrib)
+  lora-adapter:
+    build: { context: ./contrib/supermq-contrib, dockerfile: Dockerfile, target: lora }
+  opcua-adapter:
+    build: { context: ./contrib/supermq-contrib, dockerfile: Dockerfile, target: opcua }

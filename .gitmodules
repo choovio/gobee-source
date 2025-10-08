@@ -1,0 +1,3 @@
+[submodule "contrib/supermq-contrib"]
+	path = contrib/supermq-contrib
+	url = https://github.com/absmach/supermq-contrib
