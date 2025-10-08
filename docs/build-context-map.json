@@ -1,0 +1,258 @@
+[
+  {
+    "service": "users",
+    "category": "core",
+    "source": "api/,pkg/",
+    "origin": "main",
+    "ecr_image": "gobee/core/users",
+    "compose_name": "users",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "users",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "things",
+    "category": "core",
+    "source": "api/,pkg/",
+    "origin": "main",
+    "ecr_image": "gobee/core/things",
+    "compose_name": "things",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "things",
+    "args": {},
+    "notes": [
+      "compose service 'things' not found; using inferred target 'things'."
+    ]
+  },
+  {
+    "service": "certs",
+    "category": "core",
+    "source": "api/,pkg/",
+    "origin": "main",
+    "ecr_image": "gobee/core/certs",
+    "compose_name": "certs",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "certs",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "domains",
+    "category": "core",
+    "source": "api/",
+    "origin": "main",
+    "ecr_image": "gobee/core/domains",
+    "compose_name": "domains",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "domains",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "bootstrap",
+    "category": "core",
+    "source": "bootstrap/",
+    "origin": "main",
+    "ecr_image": "gobee/core/bootstrap",
+    "compose_name": "bootstrap",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "bootstrap",
+    "args": {},
+    "notes": [
+      "compose service 'bootstrap' not found; using inferred target 'bootstrap'."
+    ]
+  },
+  {
+    "service": "provision",
+    "category": "core",
+    "source": "provision/",
+    "origin": "main",
+    "ecr_image": "gobee/core/provision",
+    "compose_name": "provision",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "provision",
+    "args": {},
+    "notes": [
+      "compose service 'provision' not found; using inferred target 'provision'."
+    ]
+  },
+  {
+    "service": "readers",
+    "category": "data",
+    "source": "readers/",
+    "origin": "main",
+    "ecr_image": "gobee/data/readers",
+    "compose_name": "readers",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "readers",
+    "args": {},
+    "notes": [
+      "compose service 'readers' not found; using inferred target 'readers'."
+    ]
+  },
+  {
+    "service": "writers",
+    "category": "data",
+    "source": "consumers/",
+    "origin": "main",
+    "ecr_image": "gobee/data/writers",
+    "compose_name": "writers",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "writers",
+    "args": {},
+    "notes": [
+      "compose service 'writers' not found; using inferred target 'writers'."
+    ]
+  },
+  {
+    "service": "rules",
+    "category": "processing",
+    "source": "re/",
+    "origin": "main",
+    "ecr_image": "gobee/processing/rules",
+    "compose_name": "rules",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "rules",
+    "args": {},
+    "notes": [
+      "compose service 'rules' not found; using inferred target 'rules'."
+    ]
+  },
+  {
+    "service": "alarms",
+    "category": "processing",
+    "source": "alarms/",
+    "origin": "main",
+    "ecr_image": "gobee/processing/alarms",
+    "compose_name": "alarms",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "alarms",
+    "args": {},
+    "notes": [
+      "compose/image preset: ghcr.io/absmach/magistrala/alarms:${MG_RELEASE_TAG}"
+    ]
+  },
+  {
+    "service": "reports",
+    "category": "processing",
+    "source": "reports/",
+    "origin": "main",
+    "ecr_image": "gobee/processing/reports",
+    "compose_name": "reports",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "reports",
+    "args": {},
+    "notes": [
+      "compose/image preset: ghcr.io/absmach/magistrala/reports:${MG_RELEASE_TAG}"
+    ]
+  },
+  {
+    "service": "http",
+    "category": "adapter",
+    "source": "pkg/cmd",
+    "origin": "main",
+    "ecr_image": "gobee/adapters/http",
+    "compose_name": "http-adapter",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "http",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "ws",
+    "category": "adapter",
+    "source": "pkg/cmd",
+    "origin": "main",
+    "ecr_image": "gobee/adapters/ws",
+    "compose_name": "ws-adapter",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "ws",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "mqtt",
+    "category": "adapter",
+    "source": "pkg/cmd",
+    "origin": "main",
+    "ecr_image": "gobee/adapters/mqtt",
+    "compose_name": "mqtt-adapter",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "mqtt",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "coap",
+    "category": "adapter",
+    "source": "pkg/cmd",
+    "origin": "main",
+    "ecr_image": "gobee/adapters/coap",
+    "compose_name": "coap-adapter",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "coap",
+    "args": {},
+    "notes": []
+  },
+  {
+    "service": "lora",
+    "category": "adapter",
+    "source": "contrib/supermq-contrib",
+    "origin": "contrib",
+    "ecr_image": "gobee/adapters/lora",
+    "compose_name": "lora-adapter",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "lora",
+    "args": {},
+    "notes": [
+      "compose service 'lora-adapter' not found; using inferred target 'lora'.",
+      "contrib-sourced: https://github.com/absmach/supermq-contrib"
+    ]
+  },
+  {
+    "service": "opcua",
+    "category": "adapter",
+    "source": "contrib/supermq-contrib",
+    "origin": "contrib",
+    "ecr_image": "gobee/adapters/opcua",
+    "compose_name": "opcua-adapter",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "opcua",
+    "args": {},
+    "notes": [
+      "compose service 'opcua-adapter' not found; using inferred target 'opcua'.",
+      "contrib-sourced: https://github.com/absmach/supermq-contrib"
+    ]
+  },
+  {
+    "service": "nats",
+    "category": "infra",
+    "source": "docker/supermq-*",
+    "origin": "main",
+    "ecr_image": "gobee/infra/nats",
+    "compose_name": "nats",
+    "build_context": "docker/",
+    "dockerfile": null,
+    "target": "nats",
+    "args": {},
+    "notes": []
+  }
+]

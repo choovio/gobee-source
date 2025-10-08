@@ -1,0 +1,105 @@
+{
+  "RepoRoot": "C:\\Users\\fhdar\\Documents\\gobee-source",
+  "ComposeFound": true,
+  "Overrides": 1,
+  "Dirs": {
+    "data": {
+      "readers": true,
+      "consumers": true
+    },
+    "processing": {
+      "reports": true,
+      "re": true,
+      "alarms": true
+    },
+    "infra": {
+      "docker": true
+    },
+    "core": {
+      "pkg": true,
+      "bootstrap": true,
+      "api": true,
+      "provision": true
+    },
+    "contrib": {
+      "contrib/supermq-contrib": false
+    },
+    "adapters": {
+      "pkg": true
+    }
+  },
+  "Compose": {
+    "adapters_missing": [],
+    "infra_missing": [],
+    "processing_missing": [
+      "rules"
+    ],
+    "data_missing": [
+      "readers",
+      "writers"
+    ],
+    "services": [
+      "alarms",
+      "alarms-db",
+      "auth",
+      "auth-db",
+      "auth-redis",
+      "certs",
+      "certs-db",
+      "channels",
+      "channels-db",
+      "channels-redis",
+      "clients",
+      "clients-db",
+      "clients-redis",
+      "coap-adapter",
+      "domains",
+      "domains-db",
+      "domains-redis",
+      "groups",
+      "groups-db",
+      "http-adapter",
+      "jaeger",
+      "journal",
+      "journal-db",
+      "mqtt-adapter",
+      "nats",
+      "nginx",
+      "openbao",
+      "pdf-generator",
+      "rabbitmq",
+      "re",
+      "re-db",
+      "reports",
+      "reports-db",
+      "spicedb",
+      "spicedb-db",
+      "spicedb-migrate",
+      "ui",
+      "ui-backend",
+      "ui-backend-db",
+      "users",
+      "users-db",
+      "ws-adapter"
+    ],
+    "core_missing": [
+      "things",
+      "bootstrap",
+      "provision"
+    ]
+  },
+  "InfraSignals": {
+    "jaeger_matches": [
+      "jaeger"
+    ],
+    "postgres_matches": [],
+    "nats_matches": [
+      "nats"
+    ],
+    "smtp_matches": []
+  },
+  "ContribNeeded": {
+    "lora": true,
+    "opcua": true
+  }
+}
