@@ -1,0 +1,6 @@
+[submodule "third_party/supermq-contrib"]
+	path = third_party/supermq-contrib
+	url = https://github.com/absmach/supermq-contrib
+[submodule "third_party/certs"]
+	path = third_party/certs
+	url = https://github.com/absmach/certs
