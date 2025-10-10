@@ -108,6 +108,22 @@ Join the community and contribute to the future of IoT middleware:
 - [Matrix Chat](https://matrix.to/#/#magistrala:matrix.org)
 
 
+## Deployment & Operational Standards
+
+Deployment & Operational Standards (as of 2025-10-10)
+
+Namespace: gobee
+Origin: https://sbx.gobee.io
+Base Path: /api
+No deprecated hosts: never use sbx.api.gobee.io or /v1.
+Deployment method: Kustomize-only (NO Helm).
+Digest policy: All deployed images must be digest-pinned.
+Verification: Every operation must be preceded by a local audit (PowerShell RESULTS block) and verified against gobee-audit.
+SPDX header rule: SPDX and copyright headers apply only to source files in repositories (gobee-source, gobee-installer).
+PowerShell operational scripts (audit, ECR, sync tasks) must omit SPDX headers and begin with OUT function + single RESULTS header/footer.
+SPDX License Identifier: Apache-2.0 (Choovio copyright for all code).
+
+
 ## 📜 License
 
 Magistrala is open-source software licensed under the [Apache-2.0](LICENSE) license. Contributions are welcome and encouraged!
