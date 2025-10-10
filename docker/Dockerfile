@@ -12,13 +12,13 @@ ARG TIME
 WORKDIR /go/src/github.com/absmach/magistrala
 COPY . .
 RUN apk update \
-    && apk add make upx\
-    && make $SVC \
-    && upx build/$SVC \
-    && mv build/$SVC /exe
+    && apk add --no-cache make upx git \
+    && chmod +x scripts/build-one.sh \
+    && /bin/sh scripts/build-one.sh "\opcua"
 
 FROM scratch
 # Certificates are needed so that mailing util can work.
 COPY --from=builder /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=builder /exe /
 ENTRYPOINT ["/exe"]
+

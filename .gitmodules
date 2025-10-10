@@ -4,3 +4,6 @@
 [submodule "third_party/certs"]
 	path = third_party/certs
 	url = https://github.com/absmach/certs
+[submodule "third_party/supermq"]
+	path = third_party/supermq
+	url = https://github.com/absmach/supermq
