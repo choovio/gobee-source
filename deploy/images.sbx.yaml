@@ -1,0 +1,9 @@
+# SPDX-License-Identifier: Apache-2.0
+# (c) 2025 Choovio, Inc.
+# Name-only list for SBX. CI resolves digests and writes images.lock.json.
+images:
+  # Derived from choovio/gobee-source Dockerfiles (no tags). Do not hand-edit digests here.
+  - 595443389404.dkr.ecr.us-west-2.amazonaws.com/gobee/certs
+  - 595443389404.dkr.ecr.us-west-2.amazonaws.com/gobee/docker
+  - 595443389404.dkr.ecr.us-west-2.amazonaws.com/gobee/gobee-source
+  - 595443389404.dkr.ecr.us-west-2.amazonaws.com/gobee/supermq-docker
